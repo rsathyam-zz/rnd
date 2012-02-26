@@ -6,7 +6,7 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #Using sqlite3
-gem 'sqlite3'
+#gem 'sqlite3'
 
 #Using pg
 gem 'pg'
