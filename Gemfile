@@ -5,17 +5,14 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#Using sqlite3
-#gem 'sqlite3'
-
-#Using pg
-gem 'pg'
-
 #Using therubyracer Javascript Runtime
 gem 'therubyracer'
 
 #Using 'thin' webserver
 gem 'thin'
+
+#Using hominid
+gem 'hominid'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,6 +24,16 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+#Development Environment
+group :development do
+  gem 'sqlite3'
+end
+
+#Production Environment
+group :production do
+  gem 'pg'
 end
 
 gem 'jquery-rails'
@@ -45,3 +52,9 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# To use haml
+gem 'haml'
+
+#Adding Twitter's Bootstrap CSS toolkit
+gem 'less-rails-bootstrap'
