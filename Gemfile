@@ -8,6 +8,9 @@ gem 'rails', '3.2.1'
 #Using sqlite3
 gem 'sqlite3'
 
+#Using pg
+gem 'pg'
+
 #Using therubyracer Javascript Runtime
 gem 'therubyracer'
 
