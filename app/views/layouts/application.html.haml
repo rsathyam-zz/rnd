@@ -1,0 +1,30 @@
+!!! 5
+%html
+  %head
+    %title celebrating innovation in science and technology : rnd.io
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      .row
+        .span2
+          %a{href: '/', alt: 'rnd.io'}
+            %img{src: 'logo.gif'}
+        .span2
+          = link_to 'Engineers Onstage', 'engineers_onstage'
+      = yield
+
+      -# Footer
+      .span8.offset2
+        .row
+          .span2
+            = image_tag('feed-icon-14x14.png')
+          .span2
+            %a{href: 'subscribe'}Subscribe
+          .span2
+            %a{href: 'about'}About
+          .span2
+            %a{rel: 'license', href: 'terms'}
+              %img{alt: 'Creative Commons License', style: 'border-width:0', src: 'http://i.creativecommons.org/l/by/3.0/80x15.png'}
+          

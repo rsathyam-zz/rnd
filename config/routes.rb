@@ -3,5 +3,11 @@ Rnd::Application.routes.draw do
   match '/list_memberships'   => 'list_memberships#create'
 
   # Static pages
+  match '/subscribe'          => 'statics#subscribe'
   match '/about'              => 'statics#about'
+  match '/terms'              => 'statics#terms'
+
+  scope 'engineers_onstage' do
+    match '/'                 => 'engineers_onstage#index'
+  end
 end
