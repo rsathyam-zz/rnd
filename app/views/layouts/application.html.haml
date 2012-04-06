@@ -7,6 +7,20 @@
     = csrf_meta_tags
   %body
     .container
+      .masthead
+        %img{width: 100, height: 80, src: 'img.png'}
+        %ul
+          %li home
+          %li interviews
+          %li about
+          %li contact
+      .content
+        %p{style: 'background: blue;'} Some stuff here
+
+        = #yield
+
+  -#
+    .container
       .row
         .span2
           %a{href: '/', alt: 'rnd.io'}

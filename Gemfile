@@ -36,4 +36,4 @@ gem 'jquery-rails'
 gem 'haml'
 
 #Adding Twitter's Bootstrap CSS toolkit
-gem 'less-rails-bootstrap'
+#gem 'less-rails-bootstrap'

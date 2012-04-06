@@ -10,7 +10,52 @@
  *
  *= require_self
  *= require_tree .
- *= require twitter/bootstrap
 */
+
+body {
+  font-family: Helvetica;
+}
+
+
+/* Holds masthead and main page content. */
+.container {
+  width: 960px;
+  margin: auto;
+  background: #44b2ba;
+}
+
+.masthead {
+  background: white;
+  overflow: auto;
+  color: #44b2ba;
+  position: relative;
+}
+
+.masthead p {
+  margin: 0;
+}
+
+.masthead ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.masthead li {
+  display: inline;
+  margin: 0;
+  padding-left: 0.5em;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.content {
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
 
 
