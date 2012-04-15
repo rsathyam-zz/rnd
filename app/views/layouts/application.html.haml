@@ -8,15 +8,16 @@
   %body
     .container
       .masthead
-        %img{width: 100, height: 80, src: 'img.png'}
+        =# image_tag("rnd-masthead.png")
+        %span.logo rnd.io
         %ul
           - ct = controller.controller_name
           %li
             = link_to 'home', { controller: 'home', action: 'index' }, class: ct == 'home' ? 'selected' : ''
           %li
             = link_to 'engineers onstage', { controller: 'eos', action: 'index' }, class: ct == 'eos' ? 'selected' : ''
+          %li subscribe
           %li about
-          %li contact
       .content
         = yield
           

@@ -26,30 +26,29 @@ body {
 
 .masthead {
   background: white;
-  overflow: auto;
   color: #44b2ba;
   position: relative;
-}
-
-.masthead p {
-  margin: 0;
+  height: 73px;
 }
 
 .masthead ul {
+  font-weight: bold;
+  list-style-type: none;
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   right: 0;
   margin: 0;
-  font-weight: bold;
+  padding: 0;
 }
 
 .masthead li {
   display: inline;
-  margin: 0;
-  padding-left: 0.5em;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-top: 0;
+  margin-left: 2em;
+}
+
+.masthead .logo {
+  font-size: 5em;
+  font-family: "Georgia";
 }
 
 a {

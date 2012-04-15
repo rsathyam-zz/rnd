@@ -2,21 +2,21 @@
 #carousel_wrapper
   #carousel
     %ul
-      %li
-        %img{:alt => "", :src => "assets/firebase.jpg", :width => 500, :height => 213}
-        %p The Firebase team
-      %li
-        %img{:alt => "", :src => "p2.jpg", :width => 500, :height => 213}
-      %li
-        %img{:alt => "", :src => "p3.jpg", :width => 500, :height => 213}
-      %li
-        %img{:alt => "", :src => "p4.jpg", :width => 500, :height => 213}
+      - @features.slice(0,5).each do |feature|     # Newest five features
+        %li
+          %img{:alt => "", :src => "assets/firebase.jpg", :width => 660, :height => 440}
+          %p Watch as the newest additions to the team arrive...
 
+      %li
+        %img{:alt => "", :src => "assets/firebase.jpg", :width => 660, :height => 440}
+        %p Watch as the newest additions to the team arrive...
+      
 :javascript
   $(function() {
     $('#carousel').infiniteCarousel({
-      displayThumbnails: false
-    
+      displayThumbnails: false,
+      displayTime: 15000,
+      textholderHeight: 0.15
     });
   });
 
