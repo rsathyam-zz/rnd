@@ -3,11 +3,12 @@
   %ul
     - @features.slice(0,5).each do |feature|     # Newest five features
       %li
-        %img{:alt => "", :src => "assets/#{feature.leader_picture}", :width => 660, :height => 440}
-        %p
-          = feature.content_date.strftime("%B %d, %Y")
-          &mdash;
-          = feature.overview
+        %a{href: url_for(:controller => 'engineers_onstage', :action => 'show', :id => feature.id)}
+          %img{:alt => "", :src => "assets/#{feature.leader_picture}", :width => 660, :height => 440}
+          %p
+            = feature.content_date.strftime("%B %d, %Y")
+            &mdash;
+            = feature.overview
 
 :javascript
   $(function() {

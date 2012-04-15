@@ -10,6 +10,7 @@ Rnd::Application.routes.draw do
 
   scope 'engineers_onstage' do
     match '/'                 => 'engineers_onstage#index'
+    match '/:id'              => 'engineers_onstage#show'
     match '/itunes'           => 'engineers_onstage#itunes_index'
   end
 end
