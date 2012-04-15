@@ -70,6 +70,10 @@ a.selected {
   text-align: center;
 }
 
+#carousel {
+  margin: auto;
+}
+
 #carousel ul {
 	list-style: none;
 	width:1600px;
