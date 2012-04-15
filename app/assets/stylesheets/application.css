@@ -52,10 +52,35 @@ body {
   padding-top: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #44b2ba;
+}
+
+a.selected {
+  color: #96e118;
+}
+
 .content {
   padding-right: 2em;
   padding-left: 2em;
 }
 
+.content p {
+  text-align: center;
+}
+
+#carousel ul {
+	list-style: none;
+	width:1600px;
+	margin: 0;
+	padding: 0;
+	position:relative;
+}
+
+#carousel li {
+	display:inline;
+	float:left;
+}
 
 
