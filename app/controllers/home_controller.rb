@@ -4,3 +4,4 @@ class HomeController < ApplicationController
     @features = Feature.find(:all, :order => 'content_date DESC', :limit => 10)
   end
 end
+

@@ -21,7 +21,6 @@ body {
 .container {
   width: 960px;
   margin: auto;
-  background: #44b2ba;
 }
 
 .masthead {
@@ -33,7 +32,6 @@ body {
 
 .masthead ul {
   font-weight: bold;
-  list-style-type: none;
   position: absolute;
   bottom: 5px;
   right: 0;
@@ -42,13 +40,18 @@ body {
 }
 
 .masthead li {
-  display: inline;
   margin-left: 2em;
+  text-align: right;
+  list-style-type: none;
 }
 
 .masthead .logo {
   font-size: 5em;
   font-family: "Georgia";
+}
+
+.masthead p {
+  margin: 0;
 }
 
 a {
@@ -61,8 +64,8 @@ a.selected {
 }
 
 .content {
-  padding-right: 2em;
-  padding-left: 2em;
+  padding: 2em;
+  background: #44b2ba;
 }
 
 .content p {
@@ -86,4 +89,16 @@ a.selected {
 	float:left;
 }
 
+.footer {
+  font-size: 60%;
+}
+
+.footer ul {
+  margin: auto;
+  text-align: center;
+}
+
+.footer li {
+  display: inline;
+}
 
