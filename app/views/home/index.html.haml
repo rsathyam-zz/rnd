@@ -1,0 +1,20 @@
+-# inside main content div here
+#carousel
+  %ul
+    - @features.slice(0,5).each do |feature|     # Newest five features
+      %li
+        %img{:alt => "", :src => "assets/#{feature.leader_picture}", :width => 660, :height => 440}
+        %p
+          = feature.content_date.strftime("%B %d, %Y")
+          &mdash;
+          = feature.overview
+
+:javascript
+  $(function() {
+    $('#carousel').infiniteCarousel({
+      displayThumbnails: false,
+      displayTime: 10000,
+      textholderHeight: 0.15
+    });
+  });
+
