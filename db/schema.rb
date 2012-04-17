@@ -11,16 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318033720) do
+ActiveRecord::Schema.define(:version => 20120415193345) do
 
   create_table "features", :force => true do |t|
-    t.string   "title"
-    t.datetime "content_date"
-    t.text     "overview"
-    t.text     "body"
-    t.string   "type"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string    "title"
+    t.timestamp "content_date"
+    t.text      "overview"
+    t.text      "body"
+    t.string    "type"
+    t.timestamp "created_at",     :null => false
+    t.timestamp "updated_at",     :null => false
+    t.string    "leader_picture"
   end
 
 end

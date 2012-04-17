@@ -29,17 +29,21 @@ xml.rss 'xmlns:itunes' => "http://www.itunes.com/dtds/podcast-1.0.dtd", :version
       xml.itunes :category, "Higher Education"
     end
 
-    xml.item do
-      xml.title "Feature title"
-      xml.itunes :author, "Ravi Sathyam and David Albrecht, with rnd.io"
-      xml.itunes :subtitle, "Engineers Onstage, an rnd.io production"
-      xml.itunes :summary, "This week we do xyz"
-      xml.itunes :image, :href => "episode_image.jpg"
-      xml.enclosure :url => "http://url.to/audio_file.m4a", :length => 8727310, :type => "audio/x-m4a"
-      xml.guid "http://example.com/podcasts/archive/aae20050615.m4a"
-      xml.pubdate "Wed, 15 Jun 2005 19:00:00 GMT"
-      xml.duration "7:04"
-      xml.itunes :keywords, "salt, pepper, shaker, exciting"
+    @features.each do |feature|
+      xml.item do
+        xml.title feature.title
+        xml.itunes :author, "Ravi Sathyam and David Albrecht, with rnd.io"
+        xml.itunes :subtitle, "Engineers Onstage, an rnd.io production"
+        xml.itunes :summary, feature.overview
+        xml.itunes :image, :href => ENV['STATICS_PATH'] + feature.leader_picture
+        xml.enclosure :url => ENV['STATICS_PATH'] + feature.audio_file, :length =>
+          feature.audio_bytes, :type => feature.audio_mime
+        xml.guid ENV['STATICS_PATH'] + feature.audio_file
+        xml.pubDate feature.content_date.strftime("%a, %d %b %Y %H:%M:%S %Z")
+        # Prints seconds with leading zeroes and colon separator
+        xml.duration "#{feature.audio_seconds/60.floor}:#{"%02d" % (feature.audio_seconds % 60)}"
+        xml.itunes :keywords, feature.feature_keywords
+      end
     end
   end
 end

@@ -10,4 +10,8 @@ class EngineersOnstageController < ApplicationController
       format.xml
     end
   end
+
+  def show
+    @feature = EosFeature.find params[:id]
+  end
 end
