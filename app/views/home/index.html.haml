@@ -4,7 +4,7 @@
     - @features.slice(0,5).each do |feature|     # Newest five features
       %li
         %a{href: url_for(:controller => 'engineers_onstage', :action => 'show', :id => feature.id)}
-          %img{:alt => "", :src => "assets/#{feature.leader_picture}", :width => 660, :height => 440}
+          %img{:alt => "", :src => ENV['STATICS_PATH'] + "#{feature.leader_picture}", :width => 660, :height => 440}
           %p
             = feature.content_date.strftime("%B %d, %Y")
             &mdash;
