@@ -12,6 +12,11 @@ class EngineersOnstageController < ApplicationController
   end
 
   def show
-    @feature = EosFeature.find params[:id]
+    @feature = params[:id].to_i != 0 ? EosFeature.find(params[:id]) :
+      EosFeature.find_by_slug(params[:id])
+
+    respond_to do |format|
+      format.html
+    end
   end
 end

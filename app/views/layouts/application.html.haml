@@ -8,13 +8,17 @@
   %body
     .container
       .masthead
-        %span.logo rnd.io
+        %span.logo
+          = link_to 'rnd.io', controller: 'home', action: 'index'
         %ul
           - ct = controller.controller_name
+          - action = controller.action_name
           %li
-            = link_to 'engineers onstage', { controller: 'home', action: 'index' }, class: ct == 'home' ? 'selected' : ''
-          %li subscribe
-          %li about
+            = link_to 'engineers onstage', { controller: 'home', action: 'index' },
+              class: ct == 'home' ? 'selected' : ''
+          %li
+            = link_to 'subscribe', { controller: 'statics', action: 'subscribe' },
+              class: (ct == 'statics' and action == 'subscribe') ? 'selected' : ''
       .content
         = yield
       .footer

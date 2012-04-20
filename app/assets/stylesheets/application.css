@@ -66,10 +66,15 @@ a.selected {
 .content {
   padding: 2em;
   background: #44b2ba;
+  color: rgb(8, 37, 80);
 }
 
-.content p {
-  text-align: center;
+.content h1 {
+  color: white;
+}
+
+.content h1.title {
+  margin-top: 0;
 }
 
 #carousel {
