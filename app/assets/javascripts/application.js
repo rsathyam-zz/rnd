@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require soundmanager2-jsmin
+//= require berniecode-animator
 //= require_tree .
 

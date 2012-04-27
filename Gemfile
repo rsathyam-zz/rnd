@@ -2,15 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-#Using 'thin' webserver
-gem 'thin'
-
-#Using hominid
-gem 'hominid'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -31,9 +22,9 @@ group :production do
 end
 
 gem 'jquery-rails'
-
-# To use haml
 gem 'haml'
+gem 'paperclip'
+gem 'aws-sdk'
+gem 'thin'
+gem 'hominid'
 
-#Adding Twitter's Bootstrap CSS toolkit
-#gem 'less-rails-bootstrap'
