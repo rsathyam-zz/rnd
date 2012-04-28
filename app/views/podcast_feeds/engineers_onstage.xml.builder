@@ -35,13 +35,13 @@ xml.rss 'xmlns:itunes' => "http://www.itunes.com/dtds/podcast-1.0.dtd", :version
         xml.itunes :author, "Ravi Sathyam and David Albrecht, with rnd.io"
         xml.itunes :subtitle, "Engineers Onstage, an rnd.io production"
         xml.itunes :summary, feature.overview
-        xml.itunes :image, :href => ENV['STATICS_PATH'] + feature.leader_picture
-        xml.enclosure :url => ENV['STATICS_PATH'] + feature.audio_file, :length =>
-          feature.audio_bytes, :type => feature.audio_mime
-        xml.guid ENV['STATICS_PATH'] + feature.audio_file
+        xml.itunes :image, :href => feature.leader_picture
+        xml.enclosure :url => feature.podcast, :length =>
+          0, :type => feature.podcast_content_type
+        xml.guid feature.podcast
         xml.pubDate feature.content_date.strftime("%a, %d %b %Y %H:%M:%S %Z")
         # Prints seconds with leading zeroes and colon separator
-        xml.duration "#{feature.audio_seconds/60.floor}:#{"%02d" % (feature.audio_seconds % 60)}"
+        #xml.duration "#{feature.audio_seconds/60.floor}:#{"%02d" % (feature.audio_seconds % 60)}"
         xml.itunes :keywords, feature.feature_keywords
       end
     end
