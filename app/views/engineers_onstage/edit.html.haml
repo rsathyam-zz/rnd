@@ -1,0 +1,13 @@
+= form_for @eos_feature, :url => { :action => :update} do |form|
+  Title
+  = form.text_field :title
+  %br
+  Overview
+  = form.text_field :overview, :size => 50
+  %br
+  Leader Picture
+  = form.file_field :leader_picture
+  %br
+  = form.submit :value => "Save"
+
+

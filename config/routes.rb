@@ -8,9 +8,5 @@ Rnd::Application.routes.draw do
   match '/about'              => 'statics#about'
   match '/terms'              => 'statics#terms'
 
-  scope 'engineers_onstage' do
-    match '/'                 => 'engineers_onstage#index'
-    match '/itunes'           => 'engineers_onstage#itunes_index'
-    match '/:id'              => 'engineers_onstage#show'
-  end
+  resources :engineers_onstage
 end
