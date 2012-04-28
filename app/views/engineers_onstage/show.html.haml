@@ -7,6 +7,14 @@
   %p
     %img{src: @feature.leader_picture}
 
+-# Social sharing (under the picture like Ravi wanted)
+%div.addthis_toolbox.addthis_default_style
+  %a.addthis_button_facebook_like{'fb:like:layout' => "button_count"}
+  %a.addthis_button_tweet
+  %a.addthis_button_google_plusone{"g:plusone:size" => "medium"}
+  %a.addthis_counter.addthis_pill_style
+
+-# Playback widget
 %div.ui360
   %a{href: @feature.podcast}
     Play
@@ -15,7 +23,7 @@
 %br
 
 = @feature.body
-  
+
 %hr
 #disqus_thread
 
@@ -27,6 +35,17 @@
     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
+
+  (function() {
+    var widget = {
+      'type': 'bestof',
+      'layout': '1',
+      'title': 'rnd.io on StumbleUpon',
+      'id': 'stblpn-w-1335601374349',
+      'topics': ['Technology', 'Science', 'Engineering', 'Startup', 'Computer Science', 'Computer Engineering', 'Software', 'Hardware'],
+      'sites': ['rnd.io']
+    }
+    if (window.STMBLPN && STMBLPN.Widget ) { if (typeof STMBLPN.Widget == 'function') { new STMBLPN.Widget(widget).render(); } else { STMBLPN.push(widget); } } else {var e, e1; STMBLPN = [widget]; e = document.createElement('SCRIPT'); e.type = 'text/javascript'; e.async = true; e.src = e.src = 'http://platform.stumbleupon.com/1/widgets.js'; e1 = document.getElementsByTagName('SCRIPT')[0]; e1.parentNode.insertBefore(e, e1);};})();
 
   threeSixtyPlayer.config = {
     playNext: false, // stop after one sound, or play through list until end
