@@ -1,4 +1,21 @@
-%form{action:'/list_memberships', method:'post'}
-  %label{for:'email_address'}Email Address
-  %input{id:'email_address', type:'text', name:'email'}
-  %input{type: 'submit', value:'Sign Up!'}
+-# inside main content div here
+#carousel
+  %ul
+    - @features.slice(0,5).each do |feature|     # Newest five features
+      %li
+        %a{href: url_for(:controller => 'engineers_onstage', :action => 'show', :id => feature.slug)}
+          %img{:alt => "", :src => feature.leader_picture, :width => 660, :height => 440}
+          %p
+            = feature.content_date.strftime("%B %d, %Y")
+            &mdash;
+            = feature.overview
+
+:javascript
+  $(function() {
+    $('#carousel').infiniteCarousel({
+      displayThumbnails: false,
+      displayTime: 10000,
+      textholderHeight: 0.15
+    });
+  });
+

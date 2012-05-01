@@ -10,7 +10,100 @@
  *
  *= require_self
  *= require_tree .
- *= require twitter/bootstrap
 */
 
+body {
+  font-family: Helvetica;
+}
+
+
+/* Holds masthead and main page content. */
+.container {
+  width: 960px;
+  margin: auto;
+}
+
+.masthead {
+  background: white;
+  color: #44b2ba;
+  position: relative;
+  height: 73px;
+}
+
+.masthead ul {
+  font-weight: bold;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.masthead li {
+  margin-left: 2em;
+  text-align: right;
+  list-style-type: none;
+}
+
+.masthead .logo {
+  font-size: 5em;
+  font-family: "Georgia";
+}
+
+.masthead p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #44b2ba;
+}
+
+a.selected {
+  color: #96e118;
+}
+
+.content {
+  padding: 2em;
+  background: #44b2ba;
+  color: rgb(8, 37, 80);
+}
+
+.content h1 {
+  color: white;
+}
+
+.content h1.title {
+  margin-top: 0;
+}
+
+#carousel {
+  margin: auto;
+}
+
+#carousel ul {
+	list-style: none;
+	width:1600px;
+	margin: 0;
+	padding: 0;
+	position:relative;
+}
+
+#carousel li {
+	display:inline;
+	float:left;
+}
+
+.footer {
+  font-size: 60%;
+}
+
+.footer ul {
+  margin: auto;
+  text-align: center;
+}
+
+.footer li {
+  display: inline;
+}
 

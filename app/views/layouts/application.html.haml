@@ -1,0 +1,35 @@
+!!! 5
+%html
+  %head
+    %title celebrating innovation in science and technology : rnd.io
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag "http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f9baabf1cafa2d6"
+    = csrf_meta_tags
+  %body
+    .container
+      .masthead
+        %span.logo
+          = link_to 'rnd.io', controller: 'home', action: 'index'
+        %ul
+          - ct = controller.controller_name
+          - action = controller.action_name
+          %li
+            = link_to 'engineers onstage', { controller: 'home', action: 'index' },
+              class: ct == 'home' ? 'selected' : ''
+          %li
+            = link_to 'subscribe', { controller: 'statics', action: 'subscribe' },
+              class: (ct == 'statics' and action == 'subscribe') ? 'selected' : ''
+      .content
+        = yield
+      .footer
+        %p
+          All contents &copy; 2012 and made available pursuant to
+          %a{href: 'http://creativecommons.org/licenses/by/3.0/'}Creative Commons Attribution 3.0 Unported.
+          All other rights reserved. Production by
+          %a{href: 'http://www.linkedin.com/in/ravisathyam'}Ravi Sathyam
+          and David Albrecht, design by David Martin and DeVaris Brown of
+          %a{href: 'https://www.klickpush.com/'} KlickPush
+          , engineering by
+          %a{href: 'http://prefiat.com/'} Prefiat LLC. 
+ 
